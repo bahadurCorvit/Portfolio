@@ -1,23 +1,25 @@
+/* ✅ Place @import FIRST (only once) */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ✅ Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
-
+/* ✅ Custom base layer */
 @layer base {
     body {
         @apply font-[Raleway];
     }
+
     li {
         @apply px-4;
         @apply font-bold;
-        @apply cursor-pointer
+        @apply cursor-pointer;
     }
-
 }
 
+/* ✅ Custom utility classes */
 .content-div {
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,9 +28,9 @@
 }
 
 .content-div:hover {
-   background-image: linear-gradient(
-    to right,
-    rgba(112,157,255,0.8),
-    hsla(242,74%,61%,0.8)
-   )!important;  
+    background-image: linear-gradient(
+        to right,
+        rgba(112, 157, 255, 0.8),
+        hsla(242, 74%, 61%, 0.8)
+    ) !important;
 }

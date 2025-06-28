@@ -1,109 +1,145 @@
 import {
-  FaMapMarkedAlt,
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+  FaClock,
+  FaLinkedin,
+  FaGithub,
+  FaGoogleScholar,
+  FaResearchgate
 } from "react-icons/fa";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { IoIosMailOpen } from "react-icons/io";
-import { IoTime } from "react-icons/io5";
-const Footers = () => {
+import { FaXTwitter } from "react-icons/fa6";
+
+const Footer = () => {
   return (
     <>
-      <section
-        className="w-full bg-[#0a192f] m-auto grid lg:grid-cols-3 grid-col-1
-      justify-between items-start lg:gap-28 gap-16 lg:p-20 p-10     "
-      >
-        <div className="flex flex-col justify-center items-start gap-10  ">
-          <h1 className="text-white font-semibold font-ubuntu text-[40px] leading-[50px]">
-            Get in touch!
+      <section className="w-full bg-gray-900 grid lg:grid-cols-3 grid-cols-1 gap-12 lg:p-16 p-8">
+        {/* Research Contact */}
+        <div className="flex flex-col gap-6">
+          <h1 className="text-white text-2xl font-bold border-b-2 border-blue-600 pb-2 inline-block">
+            Research Collaborations
           </h1>
-          <p className="bg-yellow-500 px-6 py-4 rounded-full text-[17px] font-semibold font-ubuntu hover:bg-white hover:text-black">
-            Get Started Now
+          <p className="text-gray-300">
+            Interested in discussing research opportunities or potential collaborations in computer vision and AI?
           </p>
+          <a 
+            href="mailto:201355@icp.edu.pk" 
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium w-fit transition-colors"
+          >
+            Contact Me
+          </a>
         </div>
-        <div className="flex flex-col justify-center items-start gap-10">
-          <h1 className="text-white text-2xl font-ubuntu font-semibold">
-            Contact Information
+
+        {/* Contact Information */}
+        <div className="flex flex-col gap-6">
+          <h1 className="text-white text-2xl font-bold border-b-2 border-blue-600 pb-2 inline-block">
+            Contact Details
           </h1>
-          <div className="flex flex-col justify-center items-start gap-4">
-            <p className="flex justify-center items-center gap-3">
-              <FaMapMarkedAlt className="text-white size-8" />
-              <span className="text-[17px] font-ubuntu text-slate-100">
-                First Floor, Zeeshan Arcade, Office No, 2, Street 49, G-13/2
-                Islamabad, 44220{" "}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <FaMapMarkerAlt className="text-blue-400 text-xl" />
+              <span className="text-gray-300">
+                Digital Image Processing Laboratory<br />
+                Islamia College Peshawar, Pakistan
               </span>
-            </p>
-            <p className="flex justify-center items-center gap-3">
-              <FaPhoneVolume className="text-white size-8" />
-              <span className="text-[17px] font-ubuntu text-slate-100">
-                03368865717
-              </span>
-            </p>
-            <p className="flex justify-center items-center gap-3">
-              <IoIosMailOpen className="text-white size-8" />
-              <span className="text-[17px] font-ubuntu text-slate-100">
-                zohaiby737@gmail.com
-              </span>
-            </p>
-            <p className="flex justify-center items-center gap-3">
-              <IoTime className="text-white size-8" />
-              <span className="text-[17px] font-ubuntu text-slate-100">
-                9AM to 6PM
-              </span>
-            </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaPhone className="text-blue-400 text-xl" />
+              <span className="text-gray-300">+92 312 9594710</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaEnvelope className="text-blue-400 text-xl" />
+              <a href="mailto:201355@icp.edu.pk" className="text-gray-300 hover:text-blue-400">
+                201355@icp.edu.pk
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaClock className="text-blue-400 text-xl" />
+              <span className="text-gray-300">9AM to 5PM (PST)</span>
+            </div>
           </div>
         </div>
-        <form>
-          <div className="flex flex-col justify-center items-start gap-6">
-            <h1 className="text-white text-2xl font-ubuntu font-semibold">
-              Subscribe Newsletter
-            </h1>
-            <p className="text-[16px] font-ubuntu text-slate-100">
-              {/* Loram ipsum dolar sit amet consectetur adipisicing elit. At,ex. */}
-            </p>
-            <div className="flex flex-col justify-center items-start gap-6 w-full">
+
+        {/* Academic Links */}
+        <div className="flex flex-col gap-6">
+          <h1 className="text-white text-2xl font-bold border-b-2 border-blue-600 pb-2 inline-block">
+            Academic Profiles
+          </h1>
+          <p className="text-gray-300">
+            Connect with me on academic and professional networks:
+          </p>
+          <div className="flex gap-4">
+            <a 
+              href="https://www.linkedin.com/in/muhammad-fawad-15a841319" 
+              className="text-blue-400 hover:text-blue-300 text-2xl"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+            <a 
+              href="#" 
+              className="text-gray-400 hover:text-white text-2xl"
+              aria-label="Google Scholar"
+            >
+              <FaGoogleScholar />
+            </a>
+            <a 
+              href="#" 
+              className="text-emerald-500 hover:text-emerald-400 text-2xl"
+              aria-label="ResearchGate"
+            >
+              <FaResearchgate />
+            </a>
+            <a 
+              href="#" 
+              className="text-gray-400 hover:text-white text-2xl"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+            <a 
+              href="#" 
+              className="text-gray-400 hover:text-white text-2xl"
+              aria-label="Twitter"
+            >
+              <FaXTwitter />
+            </a>
+          </div>
+          
+          {/* Research Updates */}
+          <div className="mt-4">
+            <h3 className="text-white font-medium mb-2">Research Updates</h3>
+            <div className="flex gap-2">
               <input
                 type="email"
-                placeholder="Enter your valid email"
-                className="w-full bg-slate-900 px-6 py-4 rounded-lg border-none font-ubuntu text-white"
+                placeholder="Your academic email"
+                className="flex-grow bg-gray-800 text-white px-4 py-2 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button
-                type="submit"
-                className="bg-yellow-500 px-6 py-4 rounded-xl text-[17px] font-semibold font-ubuntu hover:bg-white hover:text-black"
+              <button 
+                type="button" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
               >
-                Subscribe Now
+                Subscribe
               </button>
             </div>
           </div>
-        </form>
+        </div>
       </section>
 
-      <section className="w-full bg-black m-auto border-y-2 border-slate-600 grid lg:grid-cols-3 grid-cols-1 justify-between items-center lg:gap-28 gap-8 px-20 py-6">
-        <div>
-          <h1 className="text-white text-[17px] font-ubuntu text-center">
-            Copyright &copy; 2024, personal-site, All Rights Reserved
-          </h1>
+      {/* Copyright Section */}
+      <section className="w-full bg-gray-950 border-t border-gray-800 flex flex-col lg:flex-row justify-between items-center gap-4 px-8 py-6">
+        <div className="text-gray-400 text-sm text-center lg:text-left">
+          © {new Date().getFullYear()} Muhammad Fawad - Computer Vision Researcher
         </div>
-        <div>
-          <p className="text-white text-3xl text-center font-ubuntu font-bold">
-            Zohaib
-            <span className="text-yellow-500 italic"> Younas</span>
-          </p>
+        <div className="text-white font-medium">
+          <span className="text-blue-400">Digital Image Processing</span> Research Group
         </div>
-        <div className="flex lg:justify-end justify-center items-center gap-4">
-          <a href="https://cdn.dribbble.com/users/11475909/screenshots/20343551/media/1169e0e11347c3fa05981a450bb1ccdf.png?resize=400x300&vertical=center">
-            {" "}
-            <FaFacebook className="text-blue-600 size-6" />
-          </a>
-          <FaInstagram className="text-red-300 size-6" />
-          <FaYoutube className="text-red-600 size-6" />
-          <FaTwitter className="text-blue-400 size-6" />
+        <div className="text-gray-400 text-sm">
+          Last updated: September 2024
         </div>
       </section>
     </>
   );
 };
 
-export default Footers;
+export default Footer;

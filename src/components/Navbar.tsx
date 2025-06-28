@@ -2,83 +2,46 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { Link } from "react-scroll"; // Import Link from react-scroll
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50">
+      {/* Logo / Name */}
       <div>
-        {/* Make Zohaib Younas scroll to the Home section */}
         <Link to="home" smooth={true} duration={500} className="cursor-pointer">
           <h1 className="text-2xl font-bold">
-            <span className="text-white">Zohaib</span>{" "}
-            <span className="text-yellow-500">Younas</span>
+            <span className="text-white">Muhammad</span>{" "}
+            <span className="text-yellow-500">Fawad</span>
           </h1>
         </Link>
       </div>
 
-      {/**menu */}
+      {/* Desktop Menu */}
       <ul className="hidden md:flex">
-        <li>
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:text-yellow-500"
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:text-yellow-500"
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="skills"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:text-yellow-500"
-          >
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="work"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:text-yellow-500"
-          >
-            Work
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:text-yellow-500"
-          >
-            Contact
-          </Link>
-        </li>
+        {["home", "about", "skills", "work", "contact"].map((section) => (
+          <li key={section} className="mx-2 capitalize">
+            <Link
+              to={section}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-yellow-500"
+            >
+              {section}
+            </Link>
+          </li>
+        ))}
       </ul>
 
-      {/**hamburger */}
-      <div onClick={handleClick} className="md:hidden z-10">
+      {/* Hamburger Menu Icon */}
+      <div onClick={handleClick} className="md:hidden z-10 cursor-pointer">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
-      {/**mobile menu */}
+      {/* Mobile Menu */}
       <ul
         className={
           !nav
@@ -86,56 +49,47 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-lg">
-          <Link to="home" smooth={true} duration={500} onClick={handleClick}>
-            Home
-          </Link>
-        </li>
-        <li className="py-6 text-lg">
-          <Link to="about" smooth={true} duration={500} onClick={handleClick}>
-            About
-          </Link>
-        </li>
-        <li className="py-6 text-lg">
-          <Link to="skills" smooth={true} duration={500} onClick={handleClick}>
-            Skills
-          </Link>
-        </li>
-        <li className="py-6 text-lg">
-          <Link to="work" smooth={true} duration={500} onClick={handleClick}>
-            Work
-          </Link>
-        </li>
-        <li className="py-6 text-lg">
-          <Link to="contact" smooth={true} duration={500} onClick={handleClick}>
-            Contact
-          </Link>
-        </li>
+        {["home", "about", "skills", "work", "contact"].map((section) => (
+          <li key={section} className="py-6 text-lg capitalize">
+            <Link
+              to={section}
+              smooth={true}
+              duration={500}
+              onClick={handleClick}
+            >
+              {section}
+            </Link>
+          </li>
+        ))}
       </ul>
 
-      {/**social icons */}
+      {/* Social Icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-200"
-              href="https://www.linkedin.com/in/zohaib-younas-536755258/"
+              href="https://www.linkedin.com/in/muhammad-fawad-15a841319"
+              target="_blank"
+              rel="noreferrer"
             >
-              Linkedin <FaLinkedin size={30} />
+              LinkedIn <FaLinkedin size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
             <a
               className="flex justify-between items-center w-full text-gray-200"
-              href="https://github.com/zohaibyounas"
+              href="https://github.com/fawadcs2001"
+              target="_blank"
+              rel="noreferrer"
             >
-              Github <FaGithub size={30} />
+              GitHub <FaGithub size={30} />
             </a>
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
             <a
               className="flex justify-between items-center w-full text-gray-200"
-              href="www.linkedin.com/in/zohaib-younas-536755258"
+              href="mailto:201355@icp.edu.pk"
             >
               Email <HiOutlineMail size={30} />
             </a>
@@ -143,7 +97,9 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
               className="flex justify-between items-center w-full text-gray-200"
-              href="https://drive.google.com/drive/folders/1U8pTtkvx39ZWfQ77cwl1LFBMsqGzZBp1?dmr=1&ec=wgc-drive-globalnav-goto"
+              href="https://drive.google.com/file/d/1Q2i9_rlrrRdFD8vKhsrGsAV7PJQE8mDT/view"
+              target="_blank"
+              rel="noreferrer"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>

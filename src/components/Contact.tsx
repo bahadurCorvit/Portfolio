@@ -1,7 +1,6 @@
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import contactImg from "../assets/contact.png";
 import { useState } from "react";
 
@@ -12,38 +11,38 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
-  // Handling form submit with proper event type
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
 
-    // Prepare the data to send to the EmailJS template
     const templateParams = {
       name: formData.name,
       email: formData.email,
+      subject: formData.subject,
       message: formData.message,
     };
 
     emailjs
       .send(
-        "service_mrwhkle", // Your EmailJS Service ID
-        "template_1nxtdvm", // Your EmailJS Template ID
-        templateParams, // Pass form data here as an object
-        "nAotBHDln0-9aUzza" // Your EmailJS Public Key
+        "service_mrwhkle",
+        "template_1nxtdvm",
+        templateParams,
+        "nAotBHDln0-9aUzza"
       )
       .then(
         () => {
           setSuccess(true);
           setError(false);
           setIsSending(false);
-          setFormData({ name: "", email: "", message: "" }); // Clear all state fields
+          setFormData({ name: "", email: "", subject: "", message: "" });
           toast.success("Your message has been sent successfully!");
         },
         (error) => {
-          console.error("Error sending email:", error); // Log the full error
+          console.error("Error sending email:", error);
           setSuccess(false);
           setError(true);
           setIsSending(false);
@@ -67,66 +66,121 @@ const Contact = () => {
 
       <section
         id="contact"
-        className="w-full sm:mt-96 min-h-screen bg-gray-200 flex flex-col sm:flex-row lg:flex-row justify-center items-center py-10 gap-6 sm:gap-12 lg:gap-16"
+        className="w-full min-h-screen bg-gray-100 flex flex-col lg:flex-row justify-center items-center py-10 gap-8 px-4"
       >
-        <div className="w-full sm:w-1/2 lg:w-2/5 flex justify-center">
+        {/* Left Column - Contact Information */}
+        <div 
+          className="w-full lg:w-2/5 max-w-lg bg-white p-8 rounded-xl shadow-lg"
+          data-aos="fade-right"
+        >
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Research Inquiries</h2>
+          
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-semibold text-blue-600">Email</h3>
+              <p className="text-gray-600">201355@icp.edu.pk</p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold text-blue-600">Phone</h3>
+              <p className="text-gray-600">+92 312 9594710</p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold text-blue-600">Location</h3>
+              <p className="text-gray-600">
+                Digital Image Processing Laboratory<br />
+                Islamia College Peshawar, Pakistan
+              </p>
+            </div>
+          </div>
+
           <img
             src={contactImg}
-            alt="Contact"
-            className="w-3/4 sm:w-full lg:w-3/4 max-w-sm sm:max-w-md lg:max-w-lg"
+            alt="Research Contact"
+            className="mt-8 w-full rounded-lg"
           />
         </div>
-        <div
-          data-aos="zoom-in"
-          data-aos-delay="400"
-          className="w-full sm:w-1/2 lg:w-3/5 max-w-3xl flex flex-col justify-center items-center gap-6 bg-[#0a192f] p-6 md:p-10 lg:p-12 rounded-3xl shadow-lg"
-        >
-          <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold font-ubuntu text-center">
-            Let's Contact Us
-          </h1>
-          <form
-            onSubmit={handleSubmit}
-            id="form-box"
-            className="w-full bg-transparent flex flex-col gap-4"
-          >
-            <input
-              type="text"
-              className="w-full text-white bg-slate-900 px-4 py-3 md:px-5 md:py-4 lg:px-6 lg:py-5 rounded-lg border-none font-ubuntu"
-              placeholder="Enter your full name here"
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-            />
-            <div className="text-red-500 text-sm"></div>
 
-            <div className="w-full flex flex-col sm:flex-row gap-4">
+        {/* Right Column - Contact Form */}
+        <div
+          className="w-full lg:w-2/5 max-w-lg bg-white p-8 rounded-xl shadow-lg"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">
+            Get in Touch
+          </h1>
+          
+          <p className="text-gray-600 mb-6">
+            Interested in discussing research collaborations, graduate opportunities, 
+            or my work in computer vision? Feel free to reach out.
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <input
+                type="text"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Your Name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            <div>
               <input
                 type="email"
-                placeholder="Enter your email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Your Email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full sm:w-full lg:w-full text-white bg-slate-900 px-4 py-3 md:px-5 md:py-4 lg:px-6 lg:py-5 rounded-lg border-none font-ubuntu"
               />
             </div>
 
-            <textarea
-              className="w-full text-white bg-slate-900 px-4 py-3 md:px-5 md:py-4 lg:px-6 lg:py-5 rounded-lg border-none font-ubuntu"
-              placeholder="Enter your message"
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-            ></textarea>
+            <div>
+              <input
+                type="text"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Subject (e.g., Research Collaboration)"
+                name="subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            <div>
+              <textarea
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[150px]"
+                placeholder="Your Message"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
 
             <button
               type="submit"
               disabled={isSending}
-              className="bg-yellow-500 hover:bg-white text-black px-6 py-3 md:py-4 lg:py-5 w-full rounded-md font-semibold text-md lg:text-lg font-ubuntu"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300"
             >
-              {isSending ? "Sending..." : "Send Message"}
+              {isSending ? (
+                <span className="flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Sending...
+                </span>
+              ) : (
+                "Send Message"
+              )}
             </button>
           </form>
         </div>
