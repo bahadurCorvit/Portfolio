@@ -4,11 +4,10 @@ import {
   FaEnvelope,
   FaClock,
   FaLinkedin,
-  FaGithub,
-  FaGoogleScholar,
-  FaResearchgate
+  FaGithub
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import AcademicImg from "../assets/academic.png"; // ✅ Import your custom image
 
 const Footer = () => {
   return (
@@ -79,16 +78,9 @@ const Footer = () => {
             <a 
               href="#" 
               className="text-gray-400 hover:text-white text-2xl"
-              aria-label="Google Scholar"
+              aria-label="Academic Profile"
             >
-              <FaGoogleScholar />
-            </a>
-            <a 
-              href="#" 
-              className="text-emerald-500 hover:text-emerald-400 text-2xl"
-              aria-label="ResearchGate"
-            >
-              <FaResearchgate />
+              <img src={AcademicImg} alt="Academic Profile" className="w-6 h-6 rounded-full" />
             </a>
             <a 
               href="#" 
@@ -105,7 +97,7 @@ const Footer = () => {
               <FaXTwitter />
             </a>
           </div>
-          
+
           {/* Research Updates */}
           <div className="mt-4">
             <h3 className="text-white font-medium mb-2">Research Updates</h3>
