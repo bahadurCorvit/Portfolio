@@ -9,7 +9,7 @@ import PyTorch from "../assets/pytorch.png";
 import Sklearn from "../assets/sklearn.png";
 import Git from "../assets/git.png";
 import VSCode from "../assets/vscode.png";
-import Jupyter from "../assets/src/modelsArts.jpg";
+import Jupyter from "../assets/src/model_arts.png";
 
 const Skills = () => {
   return (
