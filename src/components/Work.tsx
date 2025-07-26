@@ -4,29 +4,23 @@ import project3 from "../assets/project3.jpg";
 import project4 from "../assets/project4.jpg";
 
 const projects = [
+
   {
     image: project1,
-    title: "Biological Feature Deepfake Detector",
-    description: "Utilized gaze, lip dynamics, and facial attributes to detect deepfakes.",
-    demo: "#",
-    code: "https://github.com/yourusername/biological-deepfake-detector"
-  },
-  {
-    image: project2,
     title: "Vision-Language Model for Deepfake Detection",
     description: "Multimodal analysis using image-text consistency for fake video detection.",
     demo: "#",
     code: "https://github.com/yourusername/vision-language-deepfake"
   },
   {
-    image: project3,
+    image: project2,
     title: "Thermal Imaging-based Robust Detection",
     description: "Created deepfake detection system using thermal domain cues.",
     demo: "#",
     code: "https://github.com/yourusername/thermal-fake-detector"
   },
   {
-    image: project4,
+    image: project3,
     title: "Knowledge Distilled MiniNet",
     description: "Compressed deepfake detection model while preserving performance.",
     demo: "#",
