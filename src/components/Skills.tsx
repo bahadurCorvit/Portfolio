@@ -9,7 +9,7 @@ import PyTorch from "../assets/pytorch.png";
 import Sklearn from "../assets/sklearn.png";
 import Git from "../assets/git.png";
 import VSCode from "../assets/vscode.png";
-import Jupyter from "../assets/jupyter.png";
+import Jupyter from "../assets/ModelArts.jpg";
 
 const Skills = () => {
   return (
@@ -20,7 +20,7 @@ const Skills = () => {
             Skills
           </p>
           <p className="py-4 text-xl">
-            Technologies and tools I work with in AI, Machine Learning, and Computer Vision.
+            Artificial Intelligence | Deep Learning | Computer Vision | DeepFake
           </p>
         </div>
 
@@ -37,7 +37,7 @@ const Skills = () => {
             { src: Sklearn, name: "Scikit-learn" },
             { src: Git, name: "Git" },
             { src: VSCode, name: "VS Code" },
-            { src: Jupyter, name: "Jupyter Notebook" },
+            { src: Jupyter, name: "ModelArts" },
           ].map((tech, index) => (
             <div
               key={index}

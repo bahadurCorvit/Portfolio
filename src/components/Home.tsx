@@ -23,14 +23,12 @@ const Home = () => {
               Muhammad Fawad
             </h1>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-600 mt-2">
-              Computer Vision Researcher & AI Enthusiast
+              Deep Learning | Computer Vision | DeepFake
             </h2>
             <p className="text-gray-700 py-6 leading-relaxed max-w-[700px] mx-auto sm:mx-0">
-              I specialize in Deepfake Detection and Medical Image Analysis, with hands-on experience 
-              in Vision-Language Models, Thermal Imaging, Gaze Estimation, and Lip Dynamics. My goal 
-              is to develop ethical, trustworthy AI systems for real-world applications in security 
-              and healthcare. Currently, I am seeking a Master's research opportunity in Computer 
-              Vision and AI, where I can contribute as a dedicated research assistant.
+            As a Research Assistant at Islamia College, I focus on DeepFake detection within the domain of Digital Image Processing, utilizing expertise in Machine Learning and Computer Vision. My journey from a Computer Science undergraduate to a dedicated researcher has been driven by a strong commitment to innovation and a desire to contribute meaningfully to advancements in AI technologies.
+
+            Supported by a solid academic foundation at Islamia College, our research team is making significant progress in the field. Our collaborative efforts reflect the power of aligning passion with the pursuit of knowledge, aiming to push the boundaries of what's possible through applied AI research.
             </p>
 
             <div className="text-gray-700 mb-4 text-sm leading-relaxed">
@@ -44,7 +42,7 @@ const Home = () => {
                 onClick={scrollToWork}
                 className="text-white bg-blue-700 border-2 border-blue-700 px-6 py-3 my-4 flex items-center rounded-md hover:bg-blue-800 hover:border-blue-800 transition-all duration-300"
               >
-                View Research
+                View My Work
                 <span className="ml-3 group-hover:rotate-90 duration-300">
                   <HiArrowCircleRight />
                 </span>

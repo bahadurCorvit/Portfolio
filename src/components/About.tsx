@@ -11,7 +11,7 @@ const About = () => {
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8 mb-8">
           <div className="sm:text-right pb-4 pl-4">
             <p className="text-4xl font-bold inline text-black border-b-4 border-blue-600">
-              Research Profile
+              Final Year Project
             </p>
           </div>
           <div></div>
@@ -22,26 +22,20 @@ const About = () => {
           {/** Text Section */}
           <div className="order-2 sm:order-1 text-center sm:text-left text-lg leading-relaxed">
             <p className="text-gray-700">
-              I am a Computer Vision researcher specializing in deepfake detection and medical image analysis. 
-              My work focuses on developing interpretable AI systems using multimodal approaches including:
+              During my final year project, I was involved in several key tasks related to deepfake detection:
             </p>
             
             <ul className="mt-4 list-disc pl-5 text-gray-700">
-              <li>Vision-language models and thermal imaging analysis</li>
-              <li>Biological feature verification (gaze patterns, lip dynamics)</li>
-              <li>Model optimization techniques (knowledge distillation, constellation loss)</li>
-              <li>Robust deepfake detection frameworks</li>
+              <li>Explored Knowledge Distillation techniques to compress deepfake detection models while maintaining accuracy.</li>
+              <li>Developed an interpretable detection framework using Rule-Based Representation Learning (RRL) </li>
+              <li>Implemented Vision-Language Models for multimodal analysis in deepfake detection.</li>
+              <li>Investigated the use of Thermal Imaging to create robust detection systems under varying conditions.</li>
+              <li>Explored the utilization of Biological Features such as gaze, lip reading, and facial attributes for verification.</li>
+              <li>Experimented with Constellation Loss to improve feature separation for classification tasks.</li>
             </ul>
-
-            <p className="text-gray-700 mt-6">
-              With hands-on experience in PyTorch, TensorFlow, and OpenCV, I bridge cutting-edge research 
-              with practical applications in security and healthcare diagnostics. My goal is to develop 
-              ethical, trustworthy AI systems that address real-world challenges.
-            </p>
             
             <p className="text-gray-700 mt-6 font-medium">
-              Currently seeking research collaborations and graduate study opportunities to advance state-of-the-art 
-              computer vision techniques.
+              Currently seeking research collaborations and graduate study opportunities to advance state-of-the-art computer vision techniques.
             </p>
           </div>
 
