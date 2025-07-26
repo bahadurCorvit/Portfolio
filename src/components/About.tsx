@@ -25,14 +25,19 @@ const About = () => {
               During my final year project, I was involved in several key tasks related to deepfake detection:
             </p>
             
-            <ul className="mt-4 list-disc pl-5 text-gray-700">
-              <li>Explored Knowledge Distillation techniques to compress deepfake detection models while maintaining accuracy.</li>
-              <li>Developed an interpretable detection framework using Rule-Based Representation Learning (RRL) </li>
-              <li>Implemented Vision-Language Models for multimodal analysis in deepfake detection.</li>
-              <li>Investigated the use of Thermal Imaging to create robust detection systems under varying conditions.</li>
-              <li>Explored the utilization of Biological Features such as gaze, lip reading, and facial attributes for verification.</li>
-              <li>Experimented with Constellation Loss to improve feature separation for classification tasks.</li>
-            </ul>
+<ul className="mt-4 list-disc pl-5 text-gray-700">
+    <li>Explored Knowledge Distillation techniques to compress deepfake detection models while maintaining accuracy.</li>
+    
+    <li>Developed an interpretable detection framework using Rule-Based Representation Learning (RRL) </li>
+              
+    <li>Implemented Vision-Language Models for multimodal analysis in deepfake detection.</li>
+              
+    <li>Investigated the use of Thermal Imaging to create robust detection systems under varying conditions.</li>
+              
+    <li>Explored the utilization of Biological Features such as gaze, lip reading, and facial attributes for verification.</li>
+    
+    <li>Experimented with Constellation Loss to improve feature separation for classification tasks.</li>
+</ul>
             
             <p className="text-gray-700 mt-6 font-medium">
               Currently seeking research collaborations and graduate study opportunities to advance state-of-the-art computer vision techniques.

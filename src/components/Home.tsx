@@ -27,7 +27,8 @@ const Home = () => {
             </h2>
             <p className="text-gray-700 py-6 leading-relaxed max-w-[700px] mx-auto sm:mx-0">
             As a Research Assistant at Islamia College, I focus on DeepFake detection within the domain of Digital Image Processing, utilizing expertise in Machine Learning and Computer Vision. My journey from a Computer Science undergraduate to a dedicated researcher has been driven by a strong commitment to innovation and a desire to contribute meaningfully to advancements in AI technologies.
-
+        </p>
+        <p>
             Supported by a solid academic foundation at Islamia College, our research team is making significant progress in the field. Our collaborative efforts reflect the power of aligning passion with the pursuit of knowledge, aiming to push the boundaries of what's possible through applied AI research.
             </p>
 
