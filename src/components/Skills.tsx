@@ -9,7 +9,7 @@ import PyTorch from "../assets/pytorch.png";
 import Sklearn from "../assets/sklearn.png";
 import Git from "../assets/git.png";
 import VSCode from "../assets/vscode.png";
-import Jupyter from "../assets/src/model_arts.png";
+import ModelArts from "../assets/src/model_arts.png";
 
 const Skills = () => {
   return (
@@ -37,7 +37,7 @@ const Skills = () => {
             { src: Sklearn, name: "Scikit-learn" },
             { src: Git, name: "Git" },
             { src: VSCode, name: "VS Code" },
-            { src: Jupyter, name: "ModelArts" },
+            { src: ModelArts, name: "ModelArts" },
           ].map((tech, index) => (
             <div
               key={index}
